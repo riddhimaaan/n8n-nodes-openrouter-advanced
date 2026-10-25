@@ -1,0 +1,78 @@
+{
+  "name": "n8n-nodes-openrouter-advanced",
+  "version": "0.2.0",
+  "description": "n8n community node for the full OpenRouter API — chat, responses, images, video, audio, embeddings and reranking, with provider routing, plugins, reasoning control and cost ceilings.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "openrouter",
+    "llm",
+    "ai",
+    "chat",
+    "embeddings",
+    "rerank",
+    "image-generation",
+    "video-generation",
+    "text-to-speech",
+    "transcription"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "riddhimaaan",
+    "email": "suprava@acquisitionx.pro"
+  },
+  "homepage": "https://github.com/riddhimaaan/n8n-nodes-openrouter-advanced#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riddhimaaan/n8n-nodes-openrouter-advanced.git"
+  },
+  "bugs": {
+    "url": "https://github.com/riddhimaaan/n8n-nodes-openrouter-advanced/issues"
+  },
+  "engines": {
+    "node": ">=18.10"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes --write",
+    "lint": "eslint nodes",
+    "lintfix": "eslint nodes --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/OpenRouter/OpenRouter.node.js",
+      "dist/nodes/OpenRouterChatModelAdvanced/OpenRouterChatModelAdvanced.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "@langchain/core": "*",
+    "@langchain/openai": "*",
+    "@n8n/ai-utilities": "*"
+  },
+  "peerDependenciesMeta": {
+    "@langchain/core": { "optional": true },
+    "@langchain/openai": { "optional": true },
+    "@n8n/ai-utilities": { "optional": true }
+  },
+  "devDependencies": {
+    "@langchain/core": "1.2.0",
+    "@langchain/openai": "1.4.4",
+    "@n8n/ai-utilities": "0.27.4",
+    "@types/node": "^20.19.43",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "2.34.3",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  }
+}
